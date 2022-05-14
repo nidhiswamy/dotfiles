@@ -15,6 +15,7 @@ if has('nvim')
     Plug 'nvim-telescope/telescope.nvim'
 endif
 
+Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-commentary'
@@ -42,6 +43,9 @@ augroup javascript_folding
     au!
     au FileType javascript setlocal foldmethod=syntax
 augroup END
+
+" emmet-vim
+let g:user_emmet_leader_key=','
 
 " opens below & right
 set splitbelow
