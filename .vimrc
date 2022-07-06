@@ -22,8 +22,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sensible'
-Plug 'junegunn/seoul256.vim'
-Plug 'fcpg/vim-orbital'
+Plug 'drewtempelmeyer/palenight.vim'
 Plugin 'fcpg/vim-orbital'
 Plugin 'VundleVim/Vundle.vim'
 
@@ -44,7 +43,7 @@ augroup javascript_folding
     au FileType javascript setlocal foldmethod=syntax
 augroup END
 
-" emmet-vim
+" easy js and html editing
 let g:user_emmet_leader_key=','
 
 " opens below & right
@@ -54,20 +53,28 @@ set splitright
 set undodir=~/.vim/undodir
 set undofile
 
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+" tabs and indent
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set nu
 set rnu
 set smartindent
 set nowrap
 
+" saving keymaps
 nmap zz :wa<cr>
 nmap zqq :wqa<cr>
 nmap xx :q!<cr>
 
+" personal vim theme
 set background=dark
-colorscheme orbital 
+colorscheme palenight 
+set termguicolors
+
+if (has('nvim'))
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
 
 NeoBundleCheck
