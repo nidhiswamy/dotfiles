@@ -46,10 +46,18 @@ augroup END
 " easy js and html editing
 let g:user_emmet_leader_key=','
 
+" disables error bells
+set noerrorbells
+
+" clipboard to OSx and swp files
+set clipboard=unnamed
+set noswapfile
+
 " opens below & right
 set splitbelow
 set splitright
 
+" use of undo file
 set undodir=~/.vim/undodir
 set undofile
 
