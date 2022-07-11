@@ -13,6 +13,7 @@ if has('nvim')
     tnoremap <Esc> <C-\><C-n>
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': 'TSUpdate'}
 endif
 
 Plug 'mattn/emmet-vim'
@@ -45,6 +46,18 @@ augroup END
 
 " easy js and html editing
 let g:user_emmet_leader_key=','
+
+" find files using telescope.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" lua functions
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 " disables error bells
 set noerrorbells
