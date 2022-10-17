@@ -59,6 +59,12 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
+" Finding
+set smartcase
+set ignorecase
+set hlsearch
+set incsearch
+
 " disables error bells
 set noerrorbells
 
@@ -74,15 +80,17 @@ set splitright
 set undodir=~/.vim/undodir
 set undofile
 
-" tabs and indent
+" User Interface
+syntax on
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
-set nu
-set rnu
 set smartindent
 set nowrap
+set backspace=eol,start,indent
+set nu
+set rnu
 
 " saving keymaps
 nmap zz :wa<cr>
